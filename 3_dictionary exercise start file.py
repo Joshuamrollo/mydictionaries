@@ -12,9 +12,9 @@ def main():
         if not num_cards.isdigit(): 
             print("Please enter a valid number")
             continue
-        if int(num_cards) >= 0 and int(num_cards) <= 52:
+        if int(num_cards) >= 0 and int(num_cards) <= (len(deck)):
             break
-        print("Please enter a valid number")
+        print("Please enter a valid number between 0 and 52")
 
     # Deal the cards.
     deal_cards(deck, int(num_cards))
