@@ -1,4 +1,5 @@
-def main(file_name): 
+def main(): 
+    file_name = input('enter text file name: ')
     word_dict = {}
 
     file = open(file_name, mode="r")
@@ -17,4 +18,4 @@ def main(file_name):
         print(key + ": " + str(value))
 
 
-main('WorldSeriesWinners.txt')
+main()
