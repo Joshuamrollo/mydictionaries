@@ -24,6 +24,7 @@ print("*****  start section 2 - search dictionary ********")
 print()
 
 
+
 print()
 print("*****  end section 2 ********")
 print()

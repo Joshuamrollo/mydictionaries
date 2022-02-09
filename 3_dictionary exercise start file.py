@@ -7,10 +7,17 @@ def main():
     deck = create_deck()
 
     # Get the number of cards to deal.
-    num_cards = int(input("How many cards should I deal? "))
+    while(True):
+        num_cards = input("How many cards should I deal? ")
+        if not num_cards.isdigit(): 
+            print("Please enter a valid number")
+            continue
+        if int(num_cards) >= 0 and int(num_cards) <= 52:
+            break
+        print("Please enter a valid number")
 
     # Deal the cards.
-    deal_cards(deck, num_cards)
+    deal_cards(deck, int(num_cards))
 
 
 # The create_deck function returns a dictionary
@@ -87,9 +94,8 @@ def deal_cards(deck, number):
 
     # Make sure the number of cards to deal is not
     # greater than the number of cards in the deck.
-    if number > len(deck):
-        print("number is greater than deck size")
-        return
+
+    #solved this in first function whne getting input
 
     # Deal the cards and accumulate their values.
     for num in range(number):
